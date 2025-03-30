@@ -1,43 +1,32 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect } from 'react'
 import { gsap } from 'gsap'
-import { links } from '/Users/ahmedbelghith/Desktop/my-por/src/data.jsx'
-import { FaEnvelope, FaFileAlt, FaAngleRight } from 'react-icons/fa'
+import { links } from '../data.jsx'
+import { FaEnvelope, FaFileAlt } from 'react-icons/fa'
 
 const Navbar = () => {
+  const navRef = useRef([])
+  navRef.current = []
+
   const emailRef = useRef(null)
   const resumeRef = useRef(null)
 
-  // Hover animation: add a rose-tinted box-shadow that stays until the mouse leaves.
-  const handleHoverEnter = (ref) => {
-    gsap.to(ref.current, {
-      boxShadow: '0px 0px 20px rgba(244,63,94,0.8)',
-      duration: 0.3,
-      ease: 'power2.out',
-    })
+  const addToRefs = (el) => {
+    if (el && !navRef.current.includes(el)) {
+      navRef.current.push(el)
+    }
   }
 
-  const handleHoverLeave = (ref) => {
-    gsap.to(ref.current, {
-      boxShadow: '0px 0px 0px rgba(0,0,0,0)',
-      duration: 0.3,
-      ease: 'power2.out',
+  useEffect(() => {
+    gsap.set([...navRef.current, emailRef.current, resumeRef.current], {
+      scale: 1,
     })
-  }
+  }, [])
 
-  // Shake animation on click for both Email and Resume.
-  // For Email, we trigger the mailto; for Resume, we trigger the download.
-  const handleClick = (e, ref, targetUrl) => {
-    e.preventDefault() // Prevent immediate action so animation can play
+  const handleHover = (ref, scale) => {
     gsap.to(ref.current, {
-      x: 10,
-      duration: 0.1,
+      scale: scale,
+      duration: 0.3,
       ease: 'power1.inOut',
-      yoyo: true,
-      repeat: 5,
-      onComplete: () => {
-        gsap.to(ref.current, { x: 0, duration: 0.1 })
-        window.location.href = targetUrl
-      },
     })
   }
 
@@ -45,50 +34,50 @@ const Navbar = () => {
     <nav>
       <div className="px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-8">
         {/* Left: Title */}
-        <div className="w-full sm:w-auto text-left">
+        <div
+          className="w-full sm:w-auto text-left"
+          ref={addToRefs}
+          onMouseEnter={() => handleHover(navRef.current[0], 1.1)}
+          onMouseLeave={() => handleHover(navRef.current[0], 1)}
+        >
           <h2 className="text-3xl font-bold">
-            Web <span className="text-rose-600">Developer</span>
+            Web <span className="text-sky-700">Developer</span>
           </h2>
         </div>
         {/* Center: Email */}
-        <div className="w-full sm:w-auto flex justify-center">
+        <div className="w-full font-bold sm:w-auto flex justify-center">
           <a
             ref={emailRef}
             href="mailto:ahmed@example.com"
-            onMouseEnter={() => handleHoverEnter(emailRef)}
-            onMouseLeave={() => handleHoverLeave(emailRef)}
-            onClick={(e) =>
-              handleClick(e, emailRef, 'mailto:ahmed@example.com')
-            }
-            className="flex items-center gap-x-2 text-lg tracking-wide hover:text-rose-600 duration-300"
+            onMouseEnter={() => handleHover(emailRef, 1.1)}
+            onMouseLeave={() => handleHover(emailRef, 1)}
+            className="flex items-center gap-x-2 text-lg tracking-wide hover:text-sky-600 duration-300 font-bold"
           >
             <FaEnvelope className="h-6 w-6" />
             abelghith@oakland.edu
           </a>
         </div>
         {/* Right: Links & Resume */}
-        <div className="w-full sm:w-auto flex items-center gap-x-8 justify-center sm:justify-end">
-          {links.map((link) => {
-            const { id, href, text } = link
-            return (
-              <a
-                key={id}
-                href={href}
-                className="flex items-center gap-x-2 capitalize text-lg tracking-wide hover:text-rose-600 duration-300"
-              >
-                <FaAngleRight className="h-6 w-6" />
-                {text}
-              </a>
-            )
-          })}
+        <div className="font-bold w-full sm:w-auto flex items-center gap-x-8 justify-center sm:justify-end">
+          {links.map((link, index) => (
+            <a
+              key={link.id}
+              href={link.href}
+              ref={addToRefs}
+              onMouseEnter={() => handleHover(navRef.current[index + 1], 1.5)}
+              onMouseLeave={() => handleHover(navRef.current[index + 1], 1)}
+              className="flex items-center gap-x-2 capitalize text-lg tracking-wide hover:text-sky-600 duration-300 font-bold"
+            >
+              {link.text}
+            </a>
+          ))}
           <a
             ref={resumeRef}
             href="/resume.pdf"
             download
-            onMouseEnter={() => handleHoverEnter(resumeRef)}
-            onMouseLeave={() => handleHoverLeave(resumeRef)}
-            onClick={(e) => handleClick(e, resumeRef, '/resume.pdf')}
-            className="flex items-center gap-x-2 capitalize text-lg tracking-wide hover:text-rose-600 duration-300 px-2 py-1 rounded"
+            onMouseEnter={() => handleHover(resumeRef, 1.1)}
+            onMouseLeave={() => handleHover(resumeRef, 1)}
+            className="flex items-center gap-x-2 capitalize text-lg tracking-wide hover:text-sky-600 duration-300 px-2 py-1 rounded font-bold"
           >
             <FaFileAlt className="h-6 w-6" />
             Resume
@@ -100,3 +89,23 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+// // Hover animation: add a rose-tinted box-shadow that stays until the mouse leaves.
+// const handleHoverEnter = (ref) => {
+//   gsap.to(ref.current, {
+//     boxShadow: '0px 0px 20px rgba(244,63,94,0.8)',
+//     duration: 0.1,
+//     ease: 'power2.out',
+//   })
+// }
+
+// const handleHoverLeave = (ref) => {
+//   gsap.to(ref.current, {
+//     boxShadow: '0px 0px 0px rgba(0,0,0,0)',
+//     duration: 0.1,
+//     ease: 'power2.out',
+//   })
+// }
+
+// onMouseEnter={() => handleHoverEnter(emailRef)}
+// onMouseLeave={() => handleHoverLeave(emailRef)}

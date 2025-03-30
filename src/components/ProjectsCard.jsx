@@ -1,27 +1,28 @@
 import React, { useRef } from 'react'
 import { gsap } from 'gsap'
-import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from 'react-icons/fa'
+import { FaGithubSquare } from 'react-icons/fa'
 import { TbWorldWww } from 'react-icons/tb'
+import { SiJavascript, SiHtml5, SiCss3 } from 'react-icons/si'
 
 const ProjectsCard = ({ url, img, github, title, text }) => {
   const cardRef = useRef(null)
 
   const handleMouseEnter = () => {
     gsap.to(cardRef.current, {
-      duration: 0.3,
+      duration: 0.15,
       scale: 1.03,
-      rotationY: 5, // A slight 3D tilt effect
-      boxShadow: '0 15px 25px rgba(244, 63, 94, 0.3)', // Rose-colored shadow
+      rotationY: 5,
+      boxShadow: '0 30px 60px rgba(59, 130, 246, 0.9)',
       ease: 'power3.out',
     })
   }
 
   const handleMouseLeave = () => {
     gsap.to(cardRef.current, {
-      duration: 0.3,
+      duration: 0.15,
       scale: 1,
       rotationY: 0,
-      boxShadow: '0 0px 0px rgba(0, 0, 0, 0)',
+      boxShadow: '0 15px 25px rgba(59, 130, 246, 0.5)',
       ease: 'power3.out',
     })
   }
@@ -31,23 +32,40 @@ const ProjectsCard = ({ url, img, github, title, text }) => {
       ref={cardRef}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="bg-white rounded-lg shadow-md overflow-hidden"
+      className="flex flex-col lg:flex-row bg-transparent rounded-xl shadow-md overflow-hidden w-full max-w-7xl mx-auto h-auto lg:h-80 transition-transform duration-300"
     >
+      {/* Image */}
       <img
         src={img}
         alt={title}
-        className="w-full object-contain rounded-t-lg h-64"
+        className="w-full lg:w-1/2 h-64 lg:h-full object-cover"
       />
-      <div className="capitalize p-8">
-        <h2 className="text-xl tracking-wide font-medium">{title}</h2>
-        <p className="mt-4 text-slate-700 leading-loose">{text}</p>
-        <div className="mt-4 flex gap-x-4">
-          <a href={url}>
-            <TbWorldWww className="h-8 w-8 text-slate-500 hover:text-black duration-300" />
-          </a>
-          <a href={github}>
-            <FaGithubSquare className="h-8 w-8 text-slate-500 hover:text-black duration-300" />
-          </a>
+
+      {/* Content */}
+      <div className="p-6 flex flex-col justify-between w-full lg:w-1/2">
+        <div>
+          <h2 className="text-3xl lg:text-4xl font-extrabold tracking-wide text-sky-700 mb-4">
+            {title}
+          </h2>
+
+          <div className="flex gap-4 mb-4 text-2xl text-yellow-400">
+            <SiJavascript />
+            <SiHtml5 className="text-orange-500" />
+            <SiCss3 className="text-blue-600" />
+          </div>
+          <p className="text-slate-700 mb-4">{text}</p>
+        </div>
+        <div className="flex gap-4 justify-center">
+          {url && (
+            <a href={url} target="_blank" rel="noopener noreferrer">
+              <TbWorldWww className="h-8 w-8 text-slate-500 hover:text-black transition" />
+            </a>
+          )}
+          {github && (
+            <a href={github} target="_blank" rel="noopener noreferrer">
+              <FaGithubSquare className="h-8 w-8 text-slate-500 hover:text-black transition" />
+            </a>
+          )}
         </div>
       </div>
     </article>

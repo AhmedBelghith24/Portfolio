@@ -1,0 +1,31 @@
+/* skillsCard.module.css */
+.card {
+  background-color: #e2e8f0; /* Starting with a medium gray background */
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+  border: 2px solid transparent; /* Initial border transparent */
+  cursor: pointer;
+  overflow: hidden;
+  width: 70px; /* Initial width */
+  height: 70px; /* Initial height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 5px; /* Consistent with the icon padding for a cohesive look */
+  border-radius: 12px; /* Slightly rounded corners initially */
+}
+
+.card:hover {
+  padding: 10px; /* Slightly more padding on hover */
+  border-radius: 50%; /* Fully rounded border on hover */
+  border: 2px solid #0981d1; /* Blue border on hover */
+  background-color: #e2e8f0; /* Light background on hover */
+  transform: scale(1.1); /* Scale up the card a bit to make it bigger */
+}
+
+.iconBackground {
+  background-color: #e2e8f0; /* Medium gray */
+  display: inline-block; /* Proper alignment and block formatting of icon */
+  padding: 5px; /* Padding around the icon */
+  border-radius: 50%; /* Rounded background for the icon */
+}

@@ -1,10 +1,29 @@
 import { nanoid } from 'nanoid'
-import { FaHtml5, FaJs, FaReact } from 'react-icons/fa'
+import {
+  FaHtml5,
+  FaJs,
+  FaReact,
+  FaGitAlt,
+  FaGithub,
+  FaGitlab,
+  FaPython,
+  FaBootstrap,
+} from 'react-icons/fa'
 import { FaNodeJs } from 'react-icons/fa'
-import { SiTailwindcss, SiMongodb } from 'react-icons/si'
-import img1 from '/Users/ahmedbelghith/Desktop/my-por/src/assets/p4.png'
+import {
+  SiTailwindcss,
+  SiMongodb,
+  SiVite,
+  SiMysql,
+  SiNextdotjs,
+  SiExpress,
+  SiCanva,
+  SiNetlify,
+} from 'react-icons/si'
+import img1 from '/Users/ahmedbelghith/Desktop/my-por/src/assets/port.png'
 import img2 from '/Users/ahmedbelghith/Desktop/my-por/src/assets/shell.png'
 import img3 from '/Users/ahmedbelghith/Desktop/my-por/src/assets/fakeflix.png'
+
 export const links = [
   { id: nanoid(), href: '#home', text: 'home' },
   { id: nanoid(), href: '#about', text: 'about' },
@@ -49,6 +68,66 @@ export const skills = [
     icon: <SiMongodb className="h-16 w-16 text-green-600" />,
     text: 'Experienced with MongoDB, leveraging NoSQL databases to create high-performance, scalable, and flexible data models.',
   },
+  {
+    id: nanoid(),
+    title: 'Git',
+    icon: <FaGitAlt className="h-16 w-16 text-red-500" />,
+    text: 'Experienced with version control using Git, enabling efficient management of code changes and collaborative development.',
+  },
+  {
+    id: nanoid(),
+    title: 'GitHub',
+    icon: <FaGithub className="h-16 w-16 text-gray-800" />,
+    text: 'Proficient in using GitHub for source code management and collaboration, facilitating effective team projects and code reviews.',
+  },
+  {
+    id: nanoid(),
+    title: 'GitLab',
+    icon: <FaGitlab className="h-16 w-16 text-orange-500" />,
+    text: 'Skilled in GitLab for CI/CD pipelines, issue tracking, and repository management to enhance software development workflows.',
+  },
+  {
+    id: nanoid(),
+    title: 'Vite',
+    icon: <SiVite className="h-16 w-16 text-blue-500" />,
+    text: 'Adept in using Vite for front-end tooling, appreciating its fast hot module replacement and optimized build times.',
+  },
+  {
+    id: nanoid(),
+    title: 'MySQL',
+    icon: <SiMysql className="h-16 w-16 text-blue-700" />,
+    text: 'Proficient with MySQL, designing relational databases with optimized queries and schema for efficient data storage.',
+  },
+  {
+    id: nanoid(),
+    title: 'Next.js',
+    icon: <SiNextdotjs className="h-16 w-16 text-black" />,
+    text: 'Advanced skills in Next.js for building server-side rendered React applications, improving SEO and performance.',
+  },
+  {
+    id: nanoid(),
+    title: 'Python',
+    icon: <FaPython className="h-16 w-16 text-blue-500" />,
+    text: 'Highly skilled in Python for backend development and data analysis, using popular frameworks and libraries.',
+  },
+  {
+    id: nanoid(),
+    title: 'Bootstrap',
+    icon: <FaBootstrap className="h-16 w-16 text-purple-600" />,
+    text: 'Experienced in using Bootstrap to quickly design and customize responsive, mobile-first web pages.',
+  },
+  {
+    id: nanoid(),
+    title: 'Canva',
+    icon: <SiCanva className="h-16 w-16 text-cyan-500" />,
+    text: 'Skilled in creating engaging graphics and presentations with Canva, enhancing visual content for marketing and educational purposes.',
+  },
+  {
+    id: nanoid(),
+    title: 'Netlify',
+    icon: <SiNetlify className="h-16 w-16 text-green-500" />, // Adjust the color as needed
+    text: 'Experienced with deploying and managing applications on Netlify, utilizing features like continuous deployment, live site previews, and serverless backend functions.',
+  },
 ]
 
 export const projects = [
@@ -56,24 +135,8 @@ export const projects = [
     id: nanoid(),
     img: img1,
     url: 'https://react-projects.netlify.app/',
-    github: 'https://github.com/john-smilga',
-    title: 'My Portfolio',
-    text: '👋 Welcome to my portfolio, built with React JS! This site showcases my projects, skills, and creative journey using modern, interactive web design. 🚀 Explore my work and drop me a message 📬 to learn more about how I bring ideas to life.',
-  },
-  {
-    id: nanoid(),
-    img: img2,
-    url: '',
-    github: '',
-    title: 'Gas Station Management System',
-    text: 'full-stack application using React.js, Node.js, and MongoDB to manage fuel sales, employee salaries, and inventory.',
-  },
-  {
-    id: nanoid(),
-    img: img3,
-    url: '',
-    github: 'https://github.com/Th3Wall/Fakeflix',
-    title: 'FakeFlix',
-    text: 'Not the usual clone that you can find on the web.',
+    github: 'https://github.com/AhmedBelghith24/portfolio',
+    title: 'My Portfolio 🔥',
+    text: 'Welcome to my portfolio 👋 , built with React JS! This site showcases my projects, skills, and creative journey using modern, interactive web design. 🚀 Explore my work and drop me a message 📬 to learn more about how I bring ideas to life.',
   },
 ]

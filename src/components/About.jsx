@@ -1,16 +1,19 @@
-import aboutSvg from '/Users/ahmedbelghith/Desktop/my-por/src/assets/IMG_4129.png'
-import SectionTitle from '/Users/ahmedbelghith/Desktop/my-por/src/components/SectionTitle.jsx'
+import aboutSvg from '../assets/IMG_4129.png'
+import SectionTitle from './SectionTitle.jsx'
+import HyperOne from '/Users/ahmedbelghith/Desktop/my-por/src/components/customH1/HyperOne.jsx'
+import programmerGif from '/Users/ahmedbelghith/Desktop/my-por/src/assets/graduation.png'
 const About = () => {
   return (
-    <section className="bg-white py-20" id="about">
-      <div className="align-element grid md:grid-cols-2 items-center gap-16">
+    <section className="bg-transparent py-20" id="about">
+      <HyperOne value={'About Me 👨🏻'} />
+      <div className="grid md:grid-cols-2 gap-16">
         <img
-          src={aboutSvg}
+          src={programmerGif}
+          alt="Animated programmer icon"
           className="w-full h-96 rounded-xl object-cover shadow-lg"
         />
-        <article>
-          <SectionTitle text="About Me" />
-          <p className="text-slate-600 mt-8 leading-loose">
+        <div className="flex flex-col justify-center">
+          <p className="text-slate-600 text-lg leading-loose">
             Hi, I'm Ahmed Belghith 👋, a passionate and detail-oriented Full
             Stack Developer 💻 with expertise in building dynamic, responsive,
             and user-friendly web applications. Proficient in React ⚛️, Redux
@@ -20,9 +23,10 @@ const About = () => {
             JavaScript 💡, HTML 📄, and CSS 🎨, ensuring visually appealing and
             efficient designs.
           </p>
-        </article>
+        </div>
       </div>
     </section>
   )
 }
+
 export default About
