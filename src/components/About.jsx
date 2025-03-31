@@ -1,7 +1,8 @@
 import aboutSvg from '../assets/IMG_4129.png'
 import SectionTitle from './SectionTitle.jsx'
-import HyperOne from '/Users/ahmedbelghith/Desktop/my-por/src/components/customH1/HyperOne.jsx'
-import programmerGif from '/Users/ahmedbelghith/Desktop/my-por/src/assets/graduation.png'
+import HyperOne from './customH1/HyperOne.jsx'
+import programmerGif from '../assets/graduation.png'
+
 const About = () => {
   return (
     <section className="bg-transparent py-20" id="about">

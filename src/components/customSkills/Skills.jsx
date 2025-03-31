@@ -1,8 +1,6 @@
-import HyperOne from '/Users/ahmedbelghith/Desktop/my-por/src/components/customH1/HyperOne.jsx'
-import SkillCard from '/Users/ahmedbelghith/Desktop/my-por/src/components/customSkills/skillsCard/SkillCard.jsx'
-import { useState } from 'react'
-import { skills } from '/Users/ahmedbelghith/Desktop/my-por/src/data.jsx'
-
+import HyperOne from '../customH1/HyperOne.jsx'
+import SkillCard from './skillsCard/SkillCard.jsx'
+import { skills } from '../../data.jsx'
 const skillstext = `These are the essential tools, libraries, and frameworks that
           constitute my current tech stack, enabling me to develop robust and
           innovative applications.`

@@ -7,6 +7,7 @@ export default defineConfig({
   plugins: [tailwindcss(), react()],
   assetsInclude: ['**/*.JPG'],
   server: {
-    cors: true, // Ensure CORS is enabled if needed
+    cors: true,
   },
+  base: '/',
 })

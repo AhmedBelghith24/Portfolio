@@ -3,7 +3,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import Skills from '/Users/ahmedbelghith/Desktop/my-por/src/components/customSkills/Skills.jsx'
+import Skills from './components/customSkills/Skills.jsx'
 import About from './components/About'
 import Projects from './components/Projects'
 import Talk from './components/Talk'
@@ -25,6 +25,10 @@ const App = () => {
         <Skills />
         <Projects />
         <Talk />
+        <footer className="mt-10 text-center text-base text-gray-500 font-medium">
+          Created by <span className="text-sky-700">Ahmed Belghith</span> | ©
+          2025 All rights reserved
+        </footer>
       </div>
     </div>
   )

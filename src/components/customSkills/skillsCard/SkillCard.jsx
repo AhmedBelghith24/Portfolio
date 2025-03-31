@@ -1,4 +1,4 @@
-import style from '/Users/ahmedbelghith/Desktop/my-por/src/components/customSkills/skillsCard/skillsCard.module.css'
+import style from './skillsCard.module.css'
 
 const SkillsCard = ({ icon, title }) => {
   return (

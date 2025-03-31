@@ -1,6 +1,6 @@
 import heroImg from '../assets/boh.png'
 import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from 'react-icons/fa'
-import heroimg1 from '/Users/ahmedbelghith/Desktop/my-por/src/assets/me.png'
+import { Typewriter } from 'react-simple-typewriter'
 const Hero = () => {
   return (
     <div className="py-10" id="home">
@@ -11,7 +11,15 @@ const Hero = () => {
             Ahmed Belghith
           </h1>
           <p className="mt-4 text-3xl text-sky-600 capitalize tracking-wide">
-            Full Stack Developer 👨🏻‍💻
+            <Typewriter
+              words={['Full Stack Developer 💻 !', 'React JS Developer ⚛️']}
+              loop={true}
+              cursor
+              cursorStyle="|"
+              typeSpeed={100} // slower typing
+              deleteSpeed={70} // slower deleting
+              delaySpeed={2500} // wait 2.5s before deleting
+            />
           </p>
           <p className="mt-2 text-lg text-sky-700 capitalize tracking-wide">
             Turning ideas into interactive reality
