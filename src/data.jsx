@@ -20,9 +20,9 @@ import {
   SiCanva,
   SiNetlify,
 } from 'react-icons/si'
-import img1 from '/Users/ahmedbelghith/Desktop/my-por/src/assets/port.png'
-import img2 from '/Users/ahmedbelghith/Desktop/my-por/src/assets/shell.png'
-import img3 from '/Users/ahmedbelghith/Desktop/my-por/src/assets/fakeflix.png'
+import img1 from './assets/port.png'
+import img2 from './assets/shell.png'
+import img3 from './assets/fakeflix.png'
 
 export const links = [
   { id: nanoid(), href: '#home', text: 'home' },
