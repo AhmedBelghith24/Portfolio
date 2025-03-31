@@ -134,7 +134,7 @@ export const projects = [
   {
     id: nanoid(),
     img: img1,
-    url: 'https://react-projects.netlify.app/',
+    url: 'https://portfolio-mauve-seven-15.vercel.app',
     github: 'https://github.com/AhmedBelghith24/portfolio',
     title: 'My Portfolio 🔥',
     text: 'Welcome to my portfolio 👋 , built with React JS! This site showcases my projects, skills, and creative journey using modern, interactive web design. 🚀 Explore my work and drop me a message 📬 to learn more about how I bring ideas to life.',
