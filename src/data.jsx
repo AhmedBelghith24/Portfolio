@@ -147,5 +147,5 @@ export const projects = [
   github: 'https://github.com/AhmedBelghith24/Paycheck-Management-System',
   title: 'Paycheck Management System 💰',
   text: 'This is a full-stack Paycheck Management System built with the MERN stack. It allows users to track, filter, and mark paychecks as paid, with support for supplier, bank, and monthly filters.
-},
+}
 ]
