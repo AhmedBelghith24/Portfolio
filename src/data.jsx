@@ -23,6 +23,7 @@ import {
 import img1 from './assets/port.png'
 import img2 from './assets/shell.png'
 import img3 from './assets/fakeflix.png'
+import img4 from './assets/Overview.png'
 
 export const links = [
   { id: nanoid(), href: '#home', text: 'home' },
@@ -139,4 +140,12 @@ export const projects = [
     title: 'My Portfolio 🔥',
     text: 'Welcome to my portfolio 👋 , built with React JS! This site showcases my projects, skills, and creative journey using modern, interactive web design. 🚀 Explore my work and drop me a message 📬 to learn more about how I bring ideas to life.',
   },
+  {
+  id: nanoid(),
+  img: img4, // Replace with a relevant image or screenshot of the app
+  url: 'https://your-deployment-url.com', // Replace with the actual deployment link if hosted
+  github: 'https://github.com/AhmedBelghith24/Paycheck-Management-System',
+  title: 'Paycheck Management System 💰',
+  text: 'This is a full-stack Paycheck Management System built with the MERN stack. It allows users to track, filter, and mark paychecks as paid, with support for supplier, bank, and monthly filters. Featuring a modern UI, authentication system, and data management tools — it’s designed for fast, reliable payroll oversight. 🧾✨',
+},
 ]
