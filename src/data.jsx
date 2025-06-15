@@ -146,6 +146,6 @@ export const projects = [
   url: 'https://your-deployment-url.com', // Replace with the actual deployment link if hosted
   github: 'https://github.com/AhmedBelghith24/Paycheck-Management-System',
   title: 'Paycheck Management System 💰',
-  text: 'This is a full-stack Paycheck Management System built with the MERN stack. It allows users to track, filter, and mark paychecks as paid, with support for supplier, bank, and monthly filters. Featuring a modern UI, authentication system, and data management tools — it’s designed for fast, reliable payroll oversight. 🧾✨',
+  text: 'This is a full-stack Paycheck Management System built with the MERN stack. It allows users to track, filter, and mark paychecks as paid, with support for supplier, bank, and monthly filters.
 },
 ]
