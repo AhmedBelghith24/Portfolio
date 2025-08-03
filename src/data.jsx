@@ -24,7 +24,7 @@ import img1 from './assets/port.png'
 import img2 from './assets/shell.png'
 import img3 from './assets/fakeflix.png'
 import img4 from './assets/Overview.png'
-import img5 from './assets/Screenshot 2025-08-03 at 11.30.07 AM.png'
+import img5 from './assets/Koora.png'
 
 export const links = [
   { id: nanoid(), href: '#home', text: 'home' },
