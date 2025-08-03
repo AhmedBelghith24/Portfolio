@@ -142,22 +142,19 @@ export const projects = [
     text: 'Welcome to my portfolio 👋 , built with React JS! This site showcases my projects, skills, and creative journey using modern, interactive web design. 🚀 Explore my work and drop me a message 📬 to learn more about how I bring ideas to life.',
   },
   {
-  id: nanoid(),
-  img: img4, // Replace with a relevant image or screenshot of the app
-  url: 'https://www.societe3c.online', // Replace with the actual deployment link 
-  github: 'https://github.com/AhmedBelghith24/Paycheck-Management-System',
-  title: 'Paycheck Management System 💰',
-  text: 'This is a full-stack Paycheck Management System built with the MERN stack. It allows users to track, filter, and mark paychecks as paid, with support for supplier, bank, and monthly filters.'
-}
+    id: nanoid(),
+    img: img4,
+    url: 'https://www.societe3c.online',
+    github: 'https://github.com/AhmedBelghith24/Paycheck-Management-System',
+    title: 'Paycheck Management System 💰',
+    text: 'This is a full-stack Paycheck Management System built with the MERN stack. It allows users to track, filter, and mark paychecks as paid, with support for supplier, bank, and monthly filters.',
+  },
   {
-  id: nanoid(),
-  img: img5, // Replace with a relevant image or screenshot of the shop
-  url: 'https://mrewelkoora.vercel.app', // Live deployment link
-  github: 'https://github.com/AhmedBelghith24/Merwel-Koora.git', // Replace with actual GitHub repo if different
-  title: 'Vintage Soccer Jerseys Store ⚽',
-  text: 'An e-commerce React app for browsing and purchasing vintage soccer jerseys. Features include dynamic product listings, admin-controlled inventory management, image uploads, and sales tracking.'
-}
-
-
-
+    id: nanoid(),
+    img: img5,
+    url: 'https://mrewelkoora.vercel.app',
+    github: 'https://github.com/AhmedBelghith24/Merwel-Koora',
+    title: 'Vintage Soccer Jerseys Store ⚽',
+    text: 'An e-commerce React app for browsing and purchasing vintage soccer jerseys. Features include dynamic product listings, admin-controlled inventory management, image uploads, and sales tracking.',
+  },
 ]
