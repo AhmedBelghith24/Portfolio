@@ -24,6 +24,7 @@ import img1 from './assets/port.png'
 import img2 from './assets/shell.png'
 import img3 from './assets/fakeflix.png'
 import img4 from './assets/Overview.png'
+import img5 from './assets/koora.png'
 
 export const links = [
   { id: nanoid(), href: '#home', text: 'home' },
@@ -148,6 +149,15 @@ export const projects = [
   title: 'Paycheck Management System 💰',
   text: 'This is a full-stack Paycheck Management System built with the MERN stack. It allows users to track, filter, and mark paychecks as paid, with support for supplier, bank, and monthly filters.'
 }
+  {
+  id: nanoid(),
+  img: img5, // Replace with a relevant image or screenshot of the shop
+  url: 'https://mrewelkoora.vercel.app', // Live deployment link
+  github: 'https://github.com/AhmedBelghith24/Merwel-Koora.git', // Replace with actual GitHub repo if different
+  title: 'Vintage Soccer Jerseys Store ⚽',
+  text: 'An e-commerce React app for browsing and purchasing vintage soccer jerseys. Features include dynamic product listings, admin-controlled inventory management, image uploads, and sales tracking.'
+}
+
 
 
 ]
